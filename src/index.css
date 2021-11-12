@@ -1,0 +1,112 @@
+.App {
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #ebeaeb;
+}
+form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #009688;
+  border-start-start-radius: 8px;
+  border-end-start-radius: 8px;
+  font-size: 1.2em;
+}
+
+button {
+  background: #009688;
+  border: none;
+  padding: 10px;
+  font-size: 1.2em;
+
+  border-end-end-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  border-start-end-radius: 8px;
+}
+
+.container {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 300px;
+  gap: 10px;
+}
+
+.container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  grid-row-end: span 2;
+  overflow: hidden;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-info {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(40px);
+  color: #fff;
+}
+
+.card:hover .card-info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px auto;
+  border-radius: 50%;
+  border: 6px solid #009688;
+  border-color: #009688 transparent #009688 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h4 {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+}
